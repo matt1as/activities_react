@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import configureStore from './store';
 
 import './index.css';
+import './css/styles.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
