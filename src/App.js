@@ -10,30 +10,30 @@ import { simpleAction } from './actions/simpleAction';
 
 const mapStateToProps = state => ({
   ...state
- })
+})
 
- const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   simpleAction: () => dispatch(simpleAction())
- })
+})
 
 class App extends Component {
 
   simpleAction = (event) => {
     this.props.simpleAction();
-   }
+  }
 
- render() {
-  return (
-   <div className="App">
-<button onClick={this.simpleAction}>Test redux action</button>
-<pre>
- {
-  JSON.stringify(this.props)
- }
-</pre>
-   </div>
-  );
- }
+  render() {
+    return (
+      <div className="App">
+        <button onClick={this.simpleAction}>Test redux action</button>
+        <pre>
+          {
+            JSON.stringify(this.props)
+          }
+        </pre>
+      </div>
+    );
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
